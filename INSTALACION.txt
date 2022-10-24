@@ -31,3 +31,5 @@ IR A LA RUTA  DESDE TERMINAL= \proyecto\app-cordoneda>
 1- npm install -g @angular/cli@10
 
 2- ng serve  
+--------------------------------------------------------------------------------------------
+PARA VER EL PROYECTO ENTRAR EN http://localhost:4200/
