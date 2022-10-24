@@ -1,0 +1,83 @@
+<div>
+
+
+  <hr />
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+    <div class="form-group row">
+      <div class="col-md-6 ">
+        <label for="title">Nombre:</label>
+        <input formControlName="name"  id="name" type="text" class="form-control">
+        <div *ngIf="f.name.touched && f.name.invalid" class="alert alert-danger">
+          <div *ngIf="f.name.errors.required">*El nombre es requerido.</div>
+          <div *ngIf="f.name.errors.pattern">*El campo debe tener solo letras.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-6 ">
+        <label for="title">Apellido:</label>
+        <input formControlName="surname"  id="surname" type="text" class="form-control">
+        <div *ngIf="f.surname.touched && f.surname.invalid" class="alert alert-danger">
+          <div *ngIf="f.surname.errors.pattern">*El campo debe tener solo letras.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-6 ">
+        <label for="title">Empresa:</label>
+        <input formControlName="company"  id="company" type="text" class="form-control">
+        <div *ngIf="f.company.touched && f.company.invalid" class="alert alert-danger">
+          <div *ngIf="f.company.errors.pattern">*El campo debe tener solo letras.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-6 ">
+        <label for="title">Correo:</label>
+        <input formControlName="email"  id="email" type="text" class="form-control">
+        <div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
+          <div *ngIf="f.email.errors.email">*Debe ser una direeción de correo válida.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-6 ">
+        <label for="phone">Teléfono:</label>
+        <input  formControlName="phone" id="phone" type="text" class="form-control">
+        <div *ngIf="f.phone.touched && f.phone.invalid" class="alert alert-danger">
+          <div *ngIf="f.phone.errors.pattern">*El teléfono solo debe contener números.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-6 ">
+        <label for="phone">Teléfono de hogar:</label>
+        <input formControlName="phone_house" id="phone_house" type="text"
+          class="form-control">
+        <div *ngIf="f.phone_house.touched && f.phone_house.invalid" class="alert alert-danger">
+          <div *ngIf="f.phone_house.errors.pattern">*El teléfono solo debe contener números.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-6 ">
+        <label for="phone_personalized">Teléfono personalizado:</label>
+        <input formControlName="phone_personalized" id="phone_personalized"
+          type="text" class="form-control">
+        <div *ngIf="f.phone_personalized.touched && f.phone_personalized.invalid" class="alert alert-danger">
+          <div *ngIf="f.phone_personalized.errors.pattern">*El teléfono solo debe contener números.</div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Crear</button>
+  </form>
+</div>

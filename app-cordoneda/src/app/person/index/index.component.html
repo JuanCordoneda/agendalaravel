@@ -1,0 +1,30 @@
+<section>
+
+    <br>
+    
+    <table class="table ">
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Empresa</th>
+        <th>Correo</th>
+        <th>Teléfono</th>
+        <th>Teléfono de hogar</th>
+        <th>Teléfono personalizado</th>
+        <th width="220px">Acción</th>
+      </tr>
+      <tr *ngFor="let person of persons">
+        <td>{{ person.name }}</td>
+        <td>{{ person.surname }}</td>
+        <td>{{ person.company }}</td>
+        <td>{{ person.email }}</td>
+        <td>{{ person.phone }}</td>
+        <td>{{ person.phone_house }}</td>
+        <td>{{ person.phone_personalized }}</td>
+        <td>
+          <a href="#" [routerLink]="['/person/', 'edit', person.id  ]" class="btn btn-primary" style="margin-right: 5px">Editar</a>
+          <button type="button" (click)="deletePerson(person.id)" class="btn btn-danger" style="margin-left: 5px">Eliminar</button>
+        </td>
+      </tr>
+    </table>
+ </section>

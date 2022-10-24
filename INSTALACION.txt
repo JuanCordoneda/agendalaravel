@@ -1,0 +1,33 @@
+APP-CORDONEDA = SERVICIO DE FRONT END HECHO EN ANGULAR
+BACKEND = SERVICIO DE BACK END HECHO EN LARAVEL
+
+INSTALACION
+INSTALAR TODO EL PROYECTO EN HTDOCS - XAMP. (O SU CLIENTE DE PREFERENCIA)
+Luego, hay que crear una base de datos con el nombre agenda.
+--------------------------------------------------------------------------------------------
+INSTALACION BACKEND
+
+EN EL ARCHIVO \proyecto\backend\.env= PONER LAS CREDENCIALES Y NOMBRE DE BASE DE DATOS
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=agenda
+DB_USERNAME=root
+DB_PASSWORD=
+
+IR A LA RUTA DESDE TERMINAL= \proyecto\backend\
+
+1- composer install (Quizas aquí se pida que se ejecute composer update)
+
+2- php artisan migrate
+
+3- php artisan serve
+
+--------------------------------------------------------------------------------------------
+INSTALACION FRONT-END
+IR A LA RUTA  DESDE TERMINAL= \proyecto\app-cordoneda>
+
+1- npm install -g @angular/cli@10
+
+2- ng serve  
